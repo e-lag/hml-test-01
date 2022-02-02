@@ -11,18 +11,33 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
+    "strict": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
+
     "paths": {
       "user/user": [
         "libs/user/src"
       ],
       "user/user/*": [
         "libs/user/src/*"
+      ],
+      "@app/rent": [
+        "libs/rent/src"
+      ],
+      "@app/rent/*": [
+        "libs/rent/src/*"
+      ],
+      "@app/vehicle": [
+        "libs/vehicle/src"
+      ],
+      "@app/vehicle/*": [
+        "libs/vehicle/src/*"
+      ],
+      "@app/common": [
+        "libs/common/src"
+      ],
+      "@app/common/*": [
+        "libs/common/src/*"
       ]
     }
   }

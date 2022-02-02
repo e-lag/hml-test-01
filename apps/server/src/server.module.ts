@@ -1,10 +1,24 @@
 import { Module } from '@nestjs/common';
-import { ServerController } from './server.controller';
-import { ServerService } from './server.service';
+import { DomainsModule } from './domains/domains.module';
+import { RepositoryModule } from './repository/repository.module';
+import { ControllerModule } from './controllers/controller.module';
+import { AggregateModule } from './aggregates/aggregate.module';
+import { ConfigModule } from '@nestjs/config';
+import appConfigLoader from './configurations/app-config-loader';
+import { ConfigurationsModule } from './configurations/configurations.module';
 
 @Module({
-  imports: [],
-  controllers: [ServerController],
-  providers: [ServerService],
+    imports: [
+        ConfigModule.forRoot({
+            load: [ appConfigLoader ],
+            isGlobal: true,
+        }),
+        ConfigurationsModule,
+        RepositoryModule,
+        AggregateModule,
+        DomainsModule,
+        ControllerModule,
+    ],
 })
-export class ServerModule {}
+export class ServerModule {
+}

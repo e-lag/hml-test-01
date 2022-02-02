@@ -1,0 +1,16 @@
+rent:
+  limits:
+    min: 1
+    max: 29
+  allowWeekDays:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+  basePrice: 1000
+  offset: 3
+  discounts:
+    5: 5
+    10: 10
+    18: 15

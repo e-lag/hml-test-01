@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+
+    "baseUrl": "./src",
+    "declaration": true,
+    "outDir": "../../dist/libs/vehicle",
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+}
